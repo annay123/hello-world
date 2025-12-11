@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #222;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 480px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    background-color: #333;
+    display: block;
+    image-rendering: pixelated;
+    /* Essential for pixel art */
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+}
+
+#health-bar-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 20px;
+    background: #000;
+    border: 2px solid #fff;
+}
+
+#health-bar {
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: width 0.2s;
+}
+
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h1 {
+    color: #f00;
+    text-shadow: 4px 4px 0 #000;
+    margin-bottom: 20px;
+}
